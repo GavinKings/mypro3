@@ -1,6 +1,6 @@
 const Router = require('koa-router');
 const router = new Router();
-import controller from '../../controller/index';
+import controller from '../../app/controller/index';
 
 
 router.get('/userInfo', async (ctx: any) => {
