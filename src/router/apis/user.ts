@@ -1,9 +1,11 @@
+import {Context} from "koa";
+
 const Router = require('koa-router');
 const router = new Router();
 import controller from '../../app/controller/index';
 
 
-router.get('/userInfo', async (ctx: any) => {
+router.get('/userInfo', async (ctx: Context, next: () => void) => {
 
     console.log(ctx.state);
     ctx.body = 'userInfo test';

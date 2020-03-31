@@ -1,9 +1,10 @@
+import { Context } from 'koa';
 const Router = require('koa-router');
 const router = new Router();
 
 import controller from '../../app/controller/index';
 
-router.get('/', async (ctx: any) => {
+router.get('/', async (ctx: Context, next: () => void) => {
     //设置cookie
     ctx.cookies.set('userinfo', encodeURIComponent('zhangsan'), {maxAge: 10 * 1000});
 // 获取 cookie

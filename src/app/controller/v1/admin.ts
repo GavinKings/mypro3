@@ -1,12 +1,14 @@
+import {Context} from "koa";
+
 export default class adminController {
-    async list(ctx:any) {
+    async list(ctx: Context, next: () => void) {
 
         ctx.body = '查询管理员列表list test222';
 
     }
 
 
-    async news(ctx:any){
+    async news(ctx: Context, next: () => void){
 
         console.log(ctx.url);   // /news?id=1&title=aaa
         console.log(ctx.query);  // { id: '1', title: 'aaa' } 获取的是对象   用的最多的方式      ******推荐
