@@ -1,4 +1,5 @@
 import { Model, Table, Column, AllowNull, AutoIncrement, Unique, Default, PrimaryKey, Comment, DataType } from 'sequelize-typescript';
+import { DataTypes, Op } from 'sequelize';
 
 @Table({ tableName: 'member' })
 export class Member extends Model<Member> {
