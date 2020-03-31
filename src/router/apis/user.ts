@@ -9,6 +9,8 @@ router.get('/userInfo', async (ctx: Context, next: () => void) => {
 
     console.log(ctx.state);
     ctx.body = 'userInfo test';
+
+
 });
 
 

@@ -18,6 +18,21 @@
 │  
 
 
+从数据库模型中生成models模块
+1 安装依赖
+npm i --save sequelize sequelize-auto mysql mysql2
+ 
+2 配置 package.json
+script:
+   "sql": "node ./src/utils/sqlToModels"
+
+3 编写sqlToModels.ts
+// https://github.com/sequelize/sequelize-auto
+
+
+
+
+
 
 2.2. 自定义挂载对象
 为了提高开发效率，这里人为的将一些自定义对象挂载到 app 下，用 $ 前缀命名，与 Koa.js 内置对象做区分。

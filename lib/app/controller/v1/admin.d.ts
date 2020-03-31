@@ -1,4 +1,5 @@
+import { Context } from "koa";
 export default class adminController {
-    list(ctx: any): Promise<void>;
-    news(ctx: any): Promise<void>;
+    list(ctx: Context, next: () => void): Promise<void>;
+    news(ctx: Context, next: () => void): Promise<void>;
 }
