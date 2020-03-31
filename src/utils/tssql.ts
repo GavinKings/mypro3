@@ -13,4 +13,6 @@
 //
 // #https://www.cnblogs.com/chenqionghe/p/11351710.html
 
+
+// 使用sequelize-typescript-auto 生成 models
 // # sequelize-typescript-auto -H localhost -d mynode -u root -x root -p 3306 -f  -o  ./models
