@@ -15,4 +15,6 @@
 
 
 // 使用sequelize-typescript-auto 生成 models
+// https://github.com/YES-Lee/sequelize-typescript-auto
+
 // # sequelize-typescript-auto -H localhost -d mynode -u root -x root -p 3306 -f  -o  ./models
