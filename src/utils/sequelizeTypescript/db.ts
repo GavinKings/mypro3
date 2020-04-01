@@ -1,5 +1,5 @@
-// import path from 'path';
-import { Sequelize } from 'sequelize-typescript';
+
+import {Sequelize} from 'sequelize-typescript';
 
 const sequelize = new Sequelize({
     database: 'mynode',
@@ -11,12 +11,25 @@ const sequelize = new Sequelize({
     // models: [__dirname + '../../app/models'], // or [Player, Team],
     pool: {
         min: 0,
-        max: 5
+        max: 5,
+        acquire: 30000,
+        idle: 10000
     },
+
     define: {
         timestamps: false
     }
 });
-sequelize.addModels(['../../app/models/']);
 
-export { sequelize }
+
+sequelize.authenticate().then(() => {
+    console.log('Connection has been established successfully.')
+}).catch(err => {
+    console.error('Unable to connect to the database:', err)
+});
+
+sequelize.addModels([__dirname + './src/app/models/*.model.ts']);
+
+// sequelize.addModels(['../../app/models/']);
+
+export {sequelize}
