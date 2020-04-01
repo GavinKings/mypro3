@@ -5,6 +5,8 @@ class userController {
         var data = ctx.request.body;
         ctx.body = data;
     }
+    async userlist(ctx) {
+    }
 }
 exports.default = userController;
 //# sourceMappingURL=user.js.map

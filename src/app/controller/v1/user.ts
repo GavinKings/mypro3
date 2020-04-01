@@ -19,6 +19,8 @@ export default class userController {
     }
 
     async userlist(ctx:any){
+        // var data = ctx.request.body;
+        // ctx.body = data;
         // let index =  await service.userService.findAll();
         // ctx.body = {code:200, data:index};
     }

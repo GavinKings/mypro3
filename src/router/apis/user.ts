@@ -7,7 +7,7 @@ import controller from '../../app/controller/index';
 
 
 router.get('/userInfo', async (ctx: Context, next: () => void) => {
-    // let d = await UserServiceClass.findOne()
+
     console.log(ctx.state);
     ctx.body = 'userInfo test';
 

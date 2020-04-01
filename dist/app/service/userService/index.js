@@ -4,7 +4,6 @@ const User_model_1 = require("../../models/User.model");
 class UserServiceClass {
     async findAll() {
         let data = await User_model_1.User.findAll();
-        console.log(data);
         return data;
     }
 }
