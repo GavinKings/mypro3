@@ -3,7 +3,7 @@ import { Context } from "koa";
 const Router = require('koa-router');
 const router = new Router();
 import controller from '../../app/controller/index';
-import service from '../../app/service/index'
+
 
 
 router.get('/userInfo', async (ctx: Context, next: () => void) => {
@@ -20,7 +20,7 @@ router.get('/userInfo', async (ctx: Context, next: () => void) => {
 router.post('新增用户', '/add', controller.user.add);
 
 
-router.get('用户列表查询', '/userList', service.userService.findAll)
+router.get('用户列表查询', '/userList', controller.user.userlist);
 
 export default {
     routes: router.routes()
