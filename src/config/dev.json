@@ -1,0 +1,13 @@
+{
+    "dbconfig":{
+        "host":"localhost",
+        "database":"koacms",
+        "user":"root",
+        "password":"shusong",
+        "port":300,
+        "pool":{
+            "min":0,
+            "max":5
+        }
+    }
+}

@@ -1,35 +1,15 @@
-var Koa = require('koa');
+import koa from 'koa';
+import bodyparser from 'koa-bodyparser';
 
-var bodyParser = require('koa-bodyparser');
-var session = require('koa-session');
+import router from './apiRoutes/user/index';
 
-var app = new Koa();
-// var Router = require('koa-router');
-// const router = new Router('./router/index');
-var router = require('./router/index');
+const app = new koa();
 
-//中间件
-app.use(async (ctx: any, next: any) => {
-    console.log("我是一个中间件");
-    // 当前路由匹配完成以后继续向下匹配
-    await next();
-    //如果页面找不到
-    if (ctx.status == 404) {
-        ctx.status = 404;
-        ctx.body = "404 页面de "
-    }
-});
-
-
-
-
-app.use(bodyParser());
+app.use(bodyparser());
 app.use(router.routes());
-app.use(router.allowedMethods());
 
 
-app.listen(3000,()=>{
-    //http://localhost:3000/
-    // http://localhost:3000/list
-    //控制台可看到打印
-});
+
+
+app.listen(3000)
+console.log('this sever start up :3000')
